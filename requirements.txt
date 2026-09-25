@@ -1,0 +1,9 @@
+# ─── ForgeCore AI Assistant — Runtime Dependencies ─────────
+# Stage 1 only — we add ingestion, retrieval, llm, and ui as we go.
+
+# Config & utilities
+python-dotenv>=1.0.0
+pydantic>=2.5.0
+pydantic-settings>=2.1.0
+PyYAML>=6.0
+rich>=13.7.0

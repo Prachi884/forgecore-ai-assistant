@@ -1,0 +1,87 @@
+# ─── Python ────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# ─── Virtual environments ──────────────────────────────
+.venv/
+venv/
+env/
+ENV/
+
+# ─── Environment & secrets ────────────────────────────
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+secrets/
+
+# ─── IDE / Editor ─────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# ─── Testing & coverage ───────────────────────────────
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+.tox/
+.cache
+
+# ─── Type checking & linting ──────────────────────────
+.mypy_cache/
+.ruff_cache/
+.dmypy.json
+dmypy.json
+
+# ─── Build artefacts ─────────────────────────────────
+*.egg-info/
+build/
+dist/
+
+# ─── Jupyter ──────────────────────────────────────────
+.ipynb_checkpoints/
+profile_default/
+
+# ─── Project runtime data ─────────────────────────────
+# Raw PDFs (large, sensitive in real life)
+data/raw/*
+!data/raw/.gitkeep
+
+# Vector DB (rebuildable)
+chroma_db/*
+!chroma_db/.gitkeep
+
+# Processed chunks (regeneratable)
+data/processed/*
+!data/processed/.gitkeep
+
+# ─── OS files ─────────────────────────────────────────
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# ─── Streamlit ────────────────────────────────────────
+.streamlit/secrets.toml

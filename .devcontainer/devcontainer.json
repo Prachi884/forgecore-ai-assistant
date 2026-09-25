@@ -1,0 +1,62 @@
+{
+  "name": "ForgeCore AI Assistant",
+  "description": "Dev container for the ForgeCore RAG project — Python 3.11 + ML tooling.",
+  "image": "mcr.microsoft.com/devcontainers/python:3.11-bookworm",
+
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {}
+  },
+
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "python.analysis.typeCheckingMode": "basic",
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "[python]": {
+          "editor.defaultFormatter": "charliermarsh.ruff"
+        },
+        "files.exclude": {
+          "**/__pycache__": true,
+          "**/.pytest_cache": true,
+          "**/.ruff_cache": true
+        }
+      },
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "charliermarsh.ruff",
+        "njpwerner.autodocstring",
+        "ms-toolsai.jupyter"
+      ]
+    }
+  },
+
+  "forwardPorts": [
+    8501,
+    8000
+  ],
+
+  "portsAttributes": {
+    "8501": {
+      "label": "Streamlit UI",
+      "onAutoForward": "openBrowser"
+    },
+    "8000": {
+      "label": "FastAPI (later)",
+      "onAutoForward": "notify"
+    }
+  },
+
+  "onCreateCommand": "bash .devcontainer/post-create.sh",
+  "updateContentCommand": "pip install -e \".[dev]\" --quiet",
+
+  "remoteUser": "vscode",
+
+  "containerUser": "vscode",
+
+  "mounts": [
+    "source=forgecore-${devcontainerId},target=/home/vscode/.cache,type=volume"
+  ]
+}
