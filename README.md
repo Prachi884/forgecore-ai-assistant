@@ -166,7 +166,7 @@ We build this project in small, verifiable stages. Each stage produces something
 |---|---|---|
 | 1. Foundation | ✅ | Repo scaffold, Codespaces, config, logging, paths, tests, CI |
 | 2. Document ingestion | ✅ | PDF loader + chunker, generate ForgeCore's fictional docs |
-| 3. Embeddings + vector store | ⏳ | Sentence Transformers + ChromaDB |
+| 3. Embeddings + vector store | ✅ | Sentence Transformers + ChromaDB |
 | 4. Retrieval CLI | ⏳ | Query the index from the command line |
 | 5. LLM integration | ⏳ | Gemini API client, prompt templates |
 | 6. Citations | ⏳ | Source pages attached to every answer |

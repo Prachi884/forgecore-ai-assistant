@@ -46,6 +46,9 @@ ingest: install-ingestion ## Run ingestion: load PDFs, chunk, write data/process
 install-retrieval: ## Add embeddings + ChromaDB (Stage 3)
 	$(PIP) install sentence-transformers chromadb
 
+build-index: install-retrieval ## Embed chunks and load them into ChromaDB
+	$(PYTHON) scripts/build_index.py
+
 install-llm: ## Add Gemini client (Stage 5)
 	$(PIP) install google-generativeai
 

@@ -29,6 +29,8 @@ embeddings:
   dimension: 384
   batch_size: 32
   device: cpu
+  # When true, embeddings are L2-normalised so cosine == dot product
+  normalize: true
 
 retrieval:
   # How many chunks to return per query
