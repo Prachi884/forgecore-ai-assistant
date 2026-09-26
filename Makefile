@@ -37,6 +37,12 @@ install-dev: ## Install dev dependencies (includes runtime)
 install-ingestion: ## Add PDF/document parsing libraries (Stage 2)
 	$(PIP) install pymupdf reportlab
 
+generate-docs: install-ingestion ## Generate the 10 fictional ForgeCore PDFs into data/raw/
+	$(PYTHON) scripts/generate_documents.py
+
+ingest: install-ingestion ## Run ingestion: load PDFs, chunk, write data/processed/chunks.jsonl
+	$(PYTHON) scripts/ingest_documents.py
+
 install-retrieval: ## Add embeddings + ChromaDB (Stage 3)
 	$(PIP) install sentence-transformers chromadb
 

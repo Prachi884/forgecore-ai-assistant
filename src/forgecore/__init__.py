@@ -9,7 +9,7 @@ Subsequent stages fill in ingestion, embeddings, retrieval, generation, and the 
 
 from __future__ import annotations
 
-__version__ = "0.1.0"
+__version__ = "0.2.0"
 __author__ = "ForgeCore AI Team"
-__stage__ = 1
-__stage_name__ = "Foundation & scaffolding"
+__stage__ = 2
+__stage_name__ = "Document ingestion"

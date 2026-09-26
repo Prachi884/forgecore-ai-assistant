@@ -66,15 +66,14 @@ dist/
 profile_default/
 
 # ─── Project runtime data ─────────────────────────────
-# Raw PDFs (large, sensitive in real life)
-data/raw/*
-!data/raw/.gitkeep
+# NOTE: data/raw/*.pdf is intentionally tracked — they're our fictional
+# company documents and the project must be reproducible from the repo.
 
 # Vector DB (rebuildable)
 chroma_db/*
 !chroma_db/.gitkeep
 
-# Processed chunks (regeneratable)
+# Processed chunks (regeneratable via `make ingest`)
 data/processed/*
 !data/processed/.gitkeep
 
